@@ -14,8 +14,8 @@ a:hover{
     margin: 5%;
     position: relative;
 }
-.area{
-    height: 70vh;
+.area,.typearea{
+    height: 30vh;
     padding: 0;
     margin: 0;
     width: 100%;
