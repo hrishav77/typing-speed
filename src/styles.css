@@ -1,3 +1,4 @@
+
 body{
     background-color: #1C3879;
     overflow-x:hidden;
@@ -11,9 +12,10 @@ a:hover{
 }
 .design-mode{
     margin: 5%;
+    position: relative;
 }
 .area{
-    height: 82%;
+    height: 70vh;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -21,7 +23,9 @@ a:hover{
     border-style: none;
     background-color: #1C3879;
     color:#FBDF07;
-    font-size:5rem;
+    font-size:40px;
+    display: flex;
+    flex-direction: column;
 }
 .nav-settings{
     color:#FBDF07;
@@ -31,6 +35,7 @@ a:hover{
 .mode{
     position: absolute;
     right: 20%;
+    display: flex;
 }
 .logo-settings{
     width: 50px;
@@ -46,6 +51,8 @@ a:hover{
     padding: 0;
     border: 0;
     width: 100%;
+    position: absolute;
+    bottom: 30px;
     
 }
 a.footer-style{
@@ -53,11 +60,12 @@ a.footer-style{
     font-size:1.2rem ;
     margin-right: 10%;
     margin-left: 10%;
+    position: relative;
    
 }
 
 a.footer-style:hover{
     color: #5BB318;
     font-size:1.2rem ;
-    
+    position: relative;
 }
