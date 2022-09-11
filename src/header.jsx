@@ -7,6 +7,7 @@ function Header(){
     const [dig,setDig]=useState("");
     const [no,setNo]=useState(10);
     const [score,setscore]=useState(0)
+    const [index,setindex]=useState(0);
     
     let text=""
     function random(num)
@@ -20,18 +21,25 @@ function Header(){
       }
       else{
         text=text+" "+Array[ind];
-        console.log(text)
+        
     }}
     setDig(text)
 }
    function countScore(val){
-    for(var k=0;k<dig.length;k++){
-      if (val.target.value==dig[k]){setscore(score+1)}
-      else{setscore(score)}
+    var typetext="";
+    for(let k=0;k<=index;k++) {
+      typetext=typetext+dig[k]
+      console.log(typetext)
+      ;}
+      if (val.target.value==typetext){setscore(score+1);
+        setindex(index+1);
+      }
     }
     
-   }
-  
+   
+  useEffect(()=>{
+    random(10)
+  },[])
 
   
     
@@ -49,9 +57,9 @@ function Header(){
          <a className="design-mode"  onClick={function(e) {random(20)}}>20</a>
          <a  className="design-mode" onClick={function(e) {random(30)}}>30</a>
          <a  className="design-mode" onClick={function(e) {random(60)}}>60</a></p>
+        </div> 
         </div>
-        </div>
-        Score:{score}
+        <div className="score">Score:{score}</div> 
     <div className="area">
     <form placeholder="Start typing here">
     <textarea name="typearea" className="typearea" type="text" onChange={countScore} placeholder="Start typing here"/>

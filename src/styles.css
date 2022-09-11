@@ -69,3 +69,8 @@ a.footer-style:hover{
     font-size:1.2rem ;
     position: relative;
 }
+
+.score{
+    color:#FBDF07;
+    font-size: 30px;
+}
